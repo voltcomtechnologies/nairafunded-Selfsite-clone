@@ -1,0 +1,43 @@
+name: Deploy Next.js to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Standalone
+        run: npm run build
+
+      - name: Prepare Standalone Assets
+        run: |
+          cp -r public .next/standalone/
+          cp -r .next/static .next/standalone/.next/
+
+      - name: Deploy to Hostinger via SSH
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          SOURCE: ".next/standalone/"
+          ARGS: "-rlgoDzvc -i --delete"
+          # SCRIPT_AFTER: |
+          #   cd ${{ secrets.REMOTE_TARGET }} && npm install --production && pm2 restart server.js || echo "Manual restart may be required"
