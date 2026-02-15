@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f19;
+  --foreground: #e2e8f0;
+  --brand-green: #006837;
+  --brand-green-light: #00a651;
+  --brand-gold: #D4AF37;
+  --brand-gold-dark: #B8860B;
+  --card-bg: #111827;
+  --card-border: #1e293b;
+  --muted: #94a3b8;
+  --section-bg: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, #0d2828 0%, #0b0f19 60%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), 'Inter', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Hero dot-grid pattern */
+.hero-dot-grid {
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Badge shimmer sweep */
+@keyframes badge-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.badge-shimmer {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(0, 166, 81, 0.08) 40%,
+      rgba(0, 166, 81, 0.15) 50%,
+      rgba(0, 166, 81, 0.08) 60%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: badge-shimmer 3s ease-in-out infinite;
+}
+
+/* Brand utilities */
+.bg-brand-green {
+  background-color: var(--brand-green);
+}
+
+.bg-brand-green-light {
+  background-color: var(--brand-green-light);
+}
+
+.text-brand-green {
+  color: var(--brand-green);
+}
+
+.text-brand-green-light {
+  color: var(--brand-green-light);
+}
+
+.bg-brand-gold {
+  background-color: var(--brand-gold);
+}
+
+.text-brand-gold {
+  color: var(--brand-gold);
+}
+
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+.border-card {
+  border-color: var(--card-border);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.bg-section {
+  background-color: var(--section-bg);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--brand-green-light), var(--brand-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 40px rgba(0, 166, 81, 0.15), 0 0 80px rgba(0, 166, 81, 0.05);
+}
+
+.glow-gold {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15), 0 0 80px rgba(212, 175, 55, 0.05);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-gold));
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.gradient-border:hover::before {
+  opacity: 0.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 3px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(0, 166, 81, 0.15), 0 0 60px rgba(0, 166, 81, 0.05);
+    border-color: rgba(0, 166, 81, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(0, 166, 81, 0.25), 0 0 80px rgba(0, 166, 81, 0.1);
+    border-color: rgba(0, 166, 81, 0.35);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00a651] via-[#D4AF37] to-[#00a651];
+  }
+
+  .animate-gradient {
+    animation: gradient 8s linear infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}

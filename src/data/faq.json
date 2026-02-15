@@ -1,0 +1,39 @@
+{
+    "content": [
+        {
+            "type": "FAQ",
+            "props": {
+                "heading": "FAQ (Questions You Wan Ask)",
+                "subtitle": "",
+                "items": [
+                    {
+                        "question": "Can I flip the N200k account to N1M before withdrawing?",
+                        "answer": "Lai-Lai. The max profit you can hold is 50% (N100k). Once you hit that N300k total equity, trading pauses. You collect your N70k (70%) and we reset. We want consistent cashouts, not one-time gambling luck."
+                    },
+                    {
+                        "question": "Can I use Bots or EAs?",
+                        "answer": "Yes, Boss. Bring your robot, bring your EA. As long as the bot respects the 240-second rule and doesn't scalp tick-by-tick, we are good. If your bot malfunctions and blows the account, na you and your coder get that problem."
+                    },
+                    {
+                        "question": "Is there a Daily Loss Limit?",
+                        "answer": "No. We don commot the chain. You fit lose 5% today and recover am tomorrow. As long as you don't hit the total High Water Mark (The Red Line), you are still in the game."
+                    },
+                    {
+                        "question": "Why did my account disappear?",
+                        "answer": "You likely violated the 48-Hour Rule. If you sleep on the bicycle, the bicycle goes. We run a tight ship; inactivity is not an option."
+                    },
+                    {
+                        "question": "What if I blow the account, Can I get a refund?",
+                        "answer": "Funny you. This is a test of skill. If you blow, take your \"Breakfast\" in peace and try again. No refunds, no stories."
+                    }
+                ],
+                "id": "FAQ-page-1"
+            }
+        }
+    ],
+    "root": {
+        "props": {
+            "title": "FAQ"
+        }
+    }
+}

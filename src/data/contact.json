@@ -1,0 +1,22 @@
+{
+  "root": {
+    "props": {
+      "title": "Contact"
+    }
+  },
+  "content": [
+    {
+      "type": "ContactSection",
+      "props": {
+        "heading": "Built for serious traders.",
+        "description": "NairaFunded is a modern, rules-first evaluation brand. We care about repeatable execution, clean risk, and transparent expectations.",
+        "email": "support@nairafunded.com",
+        "hours": "Mon – Fri, 8am to 6pm",
+        "location": "Central Business District, Abuja",
+        "locationDetail": "Hybrid Operations",
+        "id": "Contact-1"
+      }
+    }
+  ],
+  "zones": {}
+}

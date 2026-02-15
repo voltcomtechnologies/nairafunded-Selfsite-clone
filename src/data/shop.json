@@ -1,0 +1,104 @@
+{
+  "root": {
+    "props": {
+      "title": "Shop"
+    }
+  },
+  "content": [
+    {
+      "type": "ShopGrid",
+      "props": {
+        "heading": "Choose Your Evaluation",
+        "products": [
+          {
+            "name": "200k MT5 ACCOUNT",
+            "price": "₦8,900",
+            "rules": [
+              {
+                "text": "20% maximum drawdown"
+              },
+              {
+                "text": "No 1–4 minutes fast scalping"
+              },
+              {
+                "text": "Trade at least once in 7 days"
+              }
+            ],
+            "ctaLink": "https://client.nairafunded.com/?add-to-cart=9608",
+            "image": "/images/shop/200k.jpg"
+          },
+          {
+            "name": "400k MT5 ACCOUNT",
+            "price": "₦16,500",
+            "rules": [
+              {
+                "text": "20% maximum drawdown"
+              },
+              {
+                "text": "No 1–4 minutes fast scalping"
+              },
+              {
+                "text": "Trade at least once in 7 days"
+              }
+            ],
+            "ctaLink": "https://client.nairafunded.com/?add-to-cart=9610",
+            "image": "/images/shop/400k.jpg"
+          },
+          {
+            "name": "600k MT5 ACCOUNT",
+            "price": "₦24,500",
+            "rules": [
+              {
+                "text": "20% maximum drawdown"
+              },
+              {
+                "text": "No 1–4 minutes fast scalping"
+              },
+              {
+                "text": "Trade at least once in 7 days"
+              }
+            ],
+            "ctaLink": "https://client.nairafunded.com/?add-to-cart=9611",
+            "image": "/images/shop/600k.jpg"
+          },
+          {
+            "name": "800k MT5 ACCOUNT",
+            "price": "₦32,000",
+            "rules": [
+              {
+                "text": "20% maximum drawdown"
+              },
+              {
+                "text": "No 1–4 minutes fast scalping"
+              },
+              {
+                "text": "Trade at least once in 7 days"
+              }
+            ],
+            "ctaLink": "https://client.nairafunded.com/?add-to-cart=9612",
+            "image": "/images/shop/800k.jpg"
+          },
+          {
+            "name": "1.5M MT5 ACCOUNT",
+            "price": "₦58,000",
+            "rules": [
+              {
+                "text": "20% maximum drawdown"
+              },
+              {
+                "text": "No 1–4 minutes fast scalping"
+              },
+              {
+                "text": "Trade at least once in 7 days"
+              }
+            ],
+            "ctaLink": "https://client.nairafunded.com/?add-to-cart=9613",
+            "image": "/images/shop/1.5m.jpg"
+          }
+        ],
+        "id": "ShopGrid-1"
+      }
+    }
+  ],
+  "zones": {}
+}

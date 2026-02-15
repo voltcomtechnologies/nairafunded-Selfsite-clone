@@ -1,0 +1,44 @@
+{
+  "root": {
+    "props": {
+      "title": "Rules"
+    }
+  },
+  "content": [
+    {
+      "type": "RulesSection",
+      "props": {
+        "heading": "OFFICIAL TRADING RULES & RISK DISCLOSURE",
+        "subtitle": "(The \"Suit & Tie\" Version for Compliance)",
+        "rules": [
+          {
+            "title": "Maximum Trailing Drawdown (The \"Red Line\")",
+            "content": "Policy: The Trader's account equity must not fall below 20% of the highest recorded High-Water Mark (HWM) at any point.\n\nDefinition: The HWM is dynamic. As the account balance increases, the maximum allowable loss threshold adjusts upward proportionally.\n\nBreach Consequence: Immediate liquidation of the account and termination of the evaluation or funded status. This limit does not revert downwards."
+          },
+          {
+            "title": "Minimum Trade Duration (Anti-Scalping)",
+            "content": "Policy: All executed trades must be held open for a minimum of 240 seconds (4 minutes).\n\nViolation: Trades closed in under 240 seconds will be considered invalid. Profits generated from such trades will be voided and deducted from the account balance.\n\nRepeated violations may result in account termination."
+          },
+          {
+            "title": "Inactivity & Dormancy (The \"48-Hour Rule\")",
+            "content": "Policy: The Trader must execute at least one valid trade within every 48-hour continuous period.\n\nTechnical Requirement: This is a strict requirement from our liquidity providers to maintain server allocation.\n\nConsequence: Accounts inactive for more than 48 hours are automatically flagged for archival and deletion. Restoration is not possible."
+          },
+          {
+            "title": "Payout Policy & Profit Cap",
+            "content": "Profit Split: 70% to the Trader / 30% to the Platform.\n\nEligibility: Payout requests may be initiated only after achieving a minimum of 10% net profit.\n\nMaximum Profit Cap: The maximum withdrawable profit per cycle is capped at 50% of the starting account equity.\n\nProcedure: Upon reaching the 50% profit cap, trading is temporarily suspended, and a mandatory withdrawal of the Trader's share (70%) is processed. The account is then reset to the initial balance."
+          },
+          {
+            "title": "Trading Strategies (Bots & EAs)",
+            "content": "Authorization: We allow the use of Expert Advisors (EAs) and trading bots.\n\nRestrictions: High-Frequency Trading (HFT), tick-scalping, and arbitrage strategies are strictly prohibited.\n\nLiability: Traders are responsible for their bot's performance. Malfunctions leading to rule violations will typically result in account failure."
+          },
+          {
+            "title": "Refund & Risk Policy",
+            "content": "Service Nature: The fee paid is for an Evaluation Service and access to a simulated trading environment. It is not an investment deposit.\n\nNo Refunds: All fees are non-refundable once the service has commenced (first trade executed).\n\nRisk Warning: Trading involves substantial risk of loss. Past performance is not indicative of future results."
+          }
+        ],
+        "id": "RulesSection-1"
+      }
+    }
+  ],
+  "zones": {}
+}
