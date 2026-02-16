@@ -40,7 +40,7 @@ function Editor() {
     };
 
     const switchPage = (newSlug: string) => {
-        router.push(`/admin?page=${newSlug}`);
+        router.push(`/admin38699496?page=${newSlug}`);
     };
 
     return (
