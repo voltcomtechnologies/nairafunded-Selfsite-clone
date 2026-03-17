@@ -54,7 +54,7 @@ export default function Navbar() {
                 {/* CTA + Admin */}
                 <div className="hidden lg:flex items-center gap-4">
                     <Link
-                        href="/shop"
+                        href="https://app.nairafunded.com/dashboard"
                         className="bg-brand-green-light hover:bg-brand-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-green-500/20 active:scale-95"
                     >
                         Dashboard
@@ -91,7 +91,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <Link
-                                href="/shop"
+                                href="https://app.nairafunded.com/dashboard"
                                 className="bg-brand-green-light text-white px-6 py-3 rounded-lg text-center font-semibold mt-2"
                             >
                                 Dashboard
