@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+type AnimationType = "candlestick" | "ticker" | "pulse" | "grid";
+
 function TickerItem({ pair, index }: { pair: string; index: number }) {
     const [value, setValue] = useState<string>("-----");
 
