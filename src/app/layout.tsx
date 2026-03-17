@@ -16,16 +16,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NairaFunded — Trading evaluations built for disciplined traders",
-  description: "Unlock up to 1.5M MT5 Account with up to 90% profit split and fast 24hr payouts.",
+  metadataBase: new URL("https://nairafunded.com"),
+  title: {
+    default: "NairaFunded — Trading evaluations built for disciplined traders",
+    template: "%s | NairaFunded",
+  },
+  description:
+    "Nigeria's #1 prop trading firm. Access funded MT5 accounts up to ₦1.5M with 90% profit split and fast 24hr payouts.",
+  keywords: [
+    "prop trading Nigeria",
+    "funded trader Nigeria",
+    "forex evaluation account",
+    "NairaFunded",
+    "MT5 funded account",
+    "prop firm Nigeria",
+  ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "NairaFunded — Trading evaluations built for disciplined traders",
-    description: "Unlock up to 1.5M MT5 Account with up to 90% profit split and fast 24hr payouts.",
+    description:
+      "Nigeria's #1 prop trading firm. Access funded MT5 accounts up to ₦1.5M with 90% profit split and fast 24hr payouts.",
     url: "https://nairafunded.com",
     siteName: "NairaFunded",
     images: [
@@ -38,6 +63,13 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NairaFunded — Trading evaluations built for disciplined traders",
+    description:
+      "Nigeria's #1 prop trading firm. Access funded MT5 accounts up to ₦1.5M with 90% profit split and fast 24hr payouts.",
+    images: ["/og-image.png"],
   },
 };
 
