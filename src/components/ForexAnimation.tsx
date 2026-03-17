@@ -1,8 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-type AnimationType = "candlestick" | "ticker" | "pulse" | "grid";
+function TickerItem({ pair, index }: { pair: string; index: number }) {
+    const [value, setValue] = useState<string>("-----");
+
+    useEffect(() => {
+        setValue((1 + Math.random()).toFixed(5));
+
+        // Optionally update the value periodically to make it look alive
+        const interval = setInterval(() => {
+            setValue((1 + Math.random() * 0.5).toFixed(5));
+        }, 3000 + Math.random() * 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className="flex items-center gap-3 bg-[#111827] rounded-lg px-4 py-2 border border-[#1e293b]">
+            <span className="text-sm font-mono text-white">{pair}</span>
+            <motion.span
+                className="text-xs font-mono"
+                animate={{ color: ["#00a651", "#ef4444", "#00a651"] }}
+                transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
+            >
+                {value}
+            </motion.span>
+        </div>
+    );
+}
 
 export default function ForexAnimation({ type = "candlestick" }: { type?: AnimationType }) {
     if (type === "candlestick") {
@@ -65,16 +92,7 @@ export default function ForexAnimation({ type = "candlestick" }: { type?: Animat
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                 >
                     {[...pairs, ...pairs, ...pairs].map((pair, i) => (
-                        <div key={i} className="flex items-center gap-3 bg-[#111827] rounded-lg px-4 py-2 border border-[#1e293b]">
-                            <span className="text-sm font-mono text-white">{pair}</span>
-                            <motion.span
-                                className="text-xs font-mono"
-                                animate={{ color: ["#00a651", "#ef4444", "#00a651"] }}
-                                transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
-                            >
-                                {(1 + Math.random()).toFixed(5)}
-                            </motion.span>
-                        </div>
+                        <TickerItem key={i} pair={pair} index={i} />
                     ))}
                 </motion.div>
             </div>
