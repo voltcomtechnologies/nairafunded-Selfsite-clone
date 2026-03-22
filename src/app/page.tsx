@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     "MT5 funded account",
     "prop firm Nigeria",
   ],
+  verification: {
+    other: {
+      "facebook-domain-verification": "fin5scpi4g1nvbo70evrkrve6dsbh0",
+    },
+  },
 };
 
 export default async function Home() {
