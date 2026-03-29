@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import LiveChatWidget from "@/components/LiveChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -111,6 +112,7 @@ export default function RootLayout({
         <Navbar />
         <ParticlesBackground />
         {children}
+        <LiveChatWidget />
         <Footer />
       </body>
     </html>
