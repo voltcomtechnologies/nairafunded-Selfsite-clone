@@ -207,7 +207,7 @@
           },
           {
             "question": "Can I use Bots or EAs?",
-            "answer": "Yes, Boss. Bring your robot, bring your EA. As long as the bot respects the 240-second rule and doesn't scalp tick-by-tick, we are good. If your bot malfunctions and blows the account, na you and your coder get that problem."
+            "answer": "Yes, Boss. Bring your robot, bring your EA. As long as the bot respects the 4-minute (240s) rule and doesn't scalp tick-by-tick, we are good. If your bot malfunctions and blows the account, na you and your coder get that problem."
           },
           {
             "question": "Is there a Daily Loss Limit?",
