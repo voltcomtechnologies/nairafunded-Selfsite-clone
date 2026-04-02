@@ -17,7 +17,7 @@
           },
           {
             "title": "Minimum Trade Duration (Anti-Scalping)",
-            "content": "Policy: All executed trades must be held open for a minimum of 240 seconds (4 minutes).\n\nViolation: Trades closed in under 240 seconds will be considered invalid. Profits generated from such trades will be voided and deducted from the account balance.\n\nRepeated violations may result in account termination."
+            "content": "Policy: Every trade must be held for a minimum of 4 minutes from the moment of execution. Not because we don't trust you. Because the traders who last — don't need to close in under 4 minutes.\n\n\nFirst offence — We let it go. Once. Consider it noted.\n\n\nSecond offence — Account breach. Terminated. No negotiation. No appeal. No \"the market moved fast.\" The 4-minute rule doesn't punish good traders. It simply makes it expensive to be a bad one."
           },
           {
             "title": "Inactivity & Dormancy (The \"48-Hour Rule\")",
