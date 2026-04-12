@@ -14,7 +14,19 @@
         "hours": "Mon – Fri, 8am to 6pm",
         "location": "Central Business District, Abuja",
         "locationDetail": "Hybrid Operations",
-        "id": "Contact-1"
+        "id": "Contact-1",
+        "whatsappContacts": [
+          {
+            "label": "Direct Support",
+            "number": "2348166878921"
+          }
+        ],
+        "telegramContacts": [
+          {
+            "label": "Official Support",
+            "username": "naira_funded"
+          }
+        ]
       }
     }
   ],
