@@ -5,6 +5,8 @@ import "@puckeditor/core/dist/index.css";
 import { config } from "@/puck.config";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import { BarChart3 } from "lucide-react";
+import Link from "next/link";
 
 const PAGES = [
     { slug: "home", label: "Home" },
@@ -58,6 +60,31 @@ function Editor() {
                     flexShrink: 0,
                 }}
             >
+                {/* Dashboard / Analytics Link */}
+                <Link 
+                    href="/admin/analytics"
+                    style={{
+                        padding: "6px 16px",
+                        borderRadius: "6px",
+                        fontSize: "13px",
+                        fontWeight: 700,
+                        cursor: "pointer",
+                        marginRight: "12px",
+                        background: "#00a65120",
+                        color: "#00a651",
+                        border: "1px solid #00a65140",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        textDecoration: "none"
+                    }}
+                >
+                    <BarChart3 size={14} />
+                    View Analytics
+                </Link>
+
+                <div style={{ width: "1px", height: "20px", background: "#334155", margin: "0 12px" }}></div>
+
                 <span style={{ color: "#94a3b8", fontSize: "13px", marginRight: "12px", fontWeight: 600 }}>
                     Edit Page:
                 </span>
